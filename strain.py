@@ -31,7 +31,7 @@ class Strain:
         self.__list_price = list_price
         self.__display_price = display_price
         self.__quantity = quantity
-        self.__promised_quantity = promised_quantity
+        self.__quantity_to_promise = promised_quantity
         self.__url = url
 
     @staticmethod
@@ -122,12 +122,12 @@ class Strain:
         self.__quantity = value
 
     @property
-    def promised_quantity(self):
-        return self.__promised_quantity
+    def quantity_to_promise(self):
+        return self.__quantity_to_promise
 
-    @promised_quantity.setter
-    def promised_quantity(self, value):
-        self.__promised_quantity = value
+    @quantity_to_promise.setter
+    def quantity_to_promise(self, value):
+        self.__quantity_to_promise = value
 
     def __str__(self):
         return f"Name: {self.name}\nSKU: ({self.sku})"
